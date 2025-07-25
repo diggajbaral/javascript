@@ -1,15 +1,11 @@
-// print sum of array. 
+// get each element of array using function
 
-function sumArray(arr) {
-
-    sum = 0;
-
-    for (let i = 0; i < arr.length; i++) {
-        sum += arr[i];
-    }
-
-    return sum;
-
+function getEachArray(arr) {
+    arr.forEach(function (ele) {
+        console.log(ele)
+    });
 }
 
-console.log(sumArray([5, 5, 5]));
+const myArray = [1, 2, 3, 4, 5]
+
+getEachArray(myArray)
