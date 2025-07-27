@@ -1,11 +1,14 @@
-// get each element of array using function
+// fild the longest word
 
-function getEachArray(arr) {
-    arr.forEach(function (ele) {
-        console.log(ele)
+function lngword (sentence) {
+    const words = sentence.split(' ');
+    let longest = '';
+    words.forEach(word => {
+        if (word.length > longest.length) {
+            longest = word;
+        }
     });
+    return longest;
 }
 
-const myArray = [1, 2, 3, 4, 5]
-
-getEachArray(myArray)
+console.log((lngword("The quick brownn fox.")));
