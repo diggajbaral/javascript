@@ -1,14 +1,12 @@
-// fild the longest word
+// find sum
 
-function lngword (sentence) {
-    const words = sentence.split(' ');
-    let longest = '';
-    words.forEach(word => {
-        if (word.length > longest.length) {
-            longest = word;
-        }
-    });
-    return longest;
+function findSum(n) {
+    let sum = 0;
+
+    for (let i = 1; i <= n; i++) {
+        sum += i;
+    }
+    return sum;
 }
 
-console.log((lngword("The quick brownn fox.")));
+console.log(findSum(5));
