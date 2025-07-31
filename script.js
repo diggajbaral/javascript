@@ -1,12 +1,13 @@
-// find sum
+// find leap year using function
 
-function findSum(n) {
-    let sum = 0;
+function isLeap(yrs) {
 
-    for (let i = 1; i <= n; i++) {
-        sum += i;
+    if ((yrs % 4 === 0 && yrs % 100 !== 0) || yrs % 400 === 0) {
+        return true
+    } else {
+        return false
     }
-    return sum;
+
 }
 
-console.log(findSum(5));
+console.log(isLeap(2023));
