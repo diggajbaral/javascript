@@ -1,13 +1,10 @@
-// find leap year using function
+// revrse the array
 
-function isLeap(yrs) {
+const num = [5, 10, 15, 20, 25];
+const rev = [];
 
-    if ((yrs % 4 === 0 && yrs % 100 !== 0) || yrs % 400 === 0) {
-        return true
-    } else {
-        return false
-    }
-
+for (let i = num.length - 1; i >= 0; i--) {
+    rev.push(num[i]);
 }
 
-console.log(isLeap(2023));
+console.log(rev);
