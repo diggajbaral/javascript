@@ -1,10 +1,13 @@
-// revrse the array
+// string content or not
 
-const num = [5, 10, 15, 20, 25];
-const rev = [];
+function checkStr(str) {
 
-for (let i = num.length - 1; i >= 0; i--) {
-    rev.push(num[i]);
+    if (str.includes('java')) {
+        console.log('Found');
+    } else {
+        console.log('Not Found');
+    }
+
 }
 
-console.log(rev);
+checkStr('javascript')
