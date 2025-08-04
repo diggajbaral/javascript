@@ -1,13 +1,10 @@
-// string content or not
+// factorial
 
-function checkStr(str) {
+let num = 5;
+let factorial =1;
 
-    if (str.includes('java')) {
-        console.log('Found');
-    } else {
-        console.log('Not Found');
-    }
-
+for (let i = num; i > 0; i--) {
+    factorial *= i;
 }
 
-checkStr('javascript')
+console.log(factorial);
