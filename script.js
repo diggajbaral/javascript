@@ -1,10 +1,4 @@
-// factorial
 
-let num = 5;
-let factorial =1;
+let tarik = new Date()
 
-for (let i = num; i > 0; i--) {
-    factorial *= i;
-}
-
-console.log(factorial);
+console.log(tarik);
