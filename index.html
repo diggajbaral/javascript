@@ -13,9 +13,14 @@
 
     <script>
 
-        const tarik = new Date().toLocaleString();
-        document.querySelector('h1').textContent = tarik;
+        function func() {
+            const tarik = new Date().toLocaleString();
+            document.querySelector('h1').textContent = tarik;
+        }
 
+        func();
+        setInterval(func, 1000);
+        
     </script>
 
 </body>
