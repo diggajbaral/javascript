@@ -1,25 +1,17 @@
 
-function generatePassword(length){
+for (let i = 1; i <= 20; i++) {
 
-    const upper = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-    const lower = "abcdefghitjlmnopqrstuvwxyz";
-    const digits = "0123456789";
-    const symbol = "~!@#$%^&*()_+";
-
-    const allChars = upper + lower + digits + symbol;
-    let password = "";
-
-    for (let i = 0; i < length; i++) {
-
-        const randomIndex = Math.floor(Math.random() * allChars.length);
-        password += allChars[randomIndex];
-
+    if (i % 3 == 0 && i % 5 == 0) {
+        console.log("FizzBuzz");
+        continue
+    } else if (i % 3 == 0) {
+        console.log("Fizz");
+        continue
+    } else if (i % 5 == 0) {
+        console.log("Buzz");
+        continue
     }
 
-    return password;
+    console.log(i)
 
 }
-
-console.log(generatePassword(6));
-console.log(generatePassword(8));
-console.log(generatePassword(12));
