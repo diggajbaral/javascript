@@ -1,15 +1,6 @@
 
-let index = 0;
+const fs = require("fs");
 
-while (index <= 10) {
-    // console.log(`Value of Index is ${index}`);
-    // index++;
-    index = index + 2;
-}
+fs.writeFileSync("docs.txt", "Hello from the JavaScript!");
 
-let score = 1;
-
-do {
-    console.log(`Score is ${score}`)
-    score++;
-} while (score <= 10);
+console.log("File Created!");
