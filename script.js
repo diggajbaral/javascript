@@ -1,17 +1,14 @@
 
-for (let i = 1; i <= 20; i++) {
+function palindrome(quote){
 
-    if (i % 3 == 0 && i % 5 == 0) {
-        console.log("FizzBuzz");
-        continue
-    } else if (i % 3 == 0) {
-        console.log("Fizz");
-        continue
-    } else if (i % 5 == 0) {
-        console.log("Buzz");
-        continue
+    const rev = quote.split('').reverse().join('');
+
+    if (quote === rev) {
+        console.log(true);
+    } else {
+        console.log(false);
     }
 
-    console.log(i)
-
 }
+
+palindrome("sita")
