@@ -12,3 +12,5 @@ function palindrome(quote){
 }
 
 palindrome("sita")
+
+// JavaScript
