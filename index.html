@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wack a bug | JavaScript Game</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+        }
+
+        #khel {
+            position: relative;
+            width: 100vw;
+            height: 90vh;
+            background: #f4f4f4;
+        }
+
+        .bug {
+            position: absolute;
+            font-size: 2rem;
+            cursor: pointer;
+        }
+
+        #scoreBoard {
+            margin: 10px;
+            font-size: 1.2rem;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="scoreBoard">
+        Score: <span id="score">0</span> | Time: <span id="time">30</span>
+        <button onclick="startKhel()">Start</button>
+    </div>
+
+    <div id="khel"></div>
+
+    <script>
+        const scoreEL = document.getElementById('score');
+        const samaya = document.getElementById('time');
+        const khel = document.getElementById('khel');
+
+        let score = 0, time = 30, gameInterval, bugSamaya;
+
+        function spawnBug() {
+            const bug = document.createElement('div');
+            bug.textContent = '🐞';
+            bug.className = 'bug';
+            bug.style.left = Math.random() * 95 + 'vw';
+            bug.style.top = Math.random() * 85 + 'vh';
+
+            bug.onclick = () => {
+                score++;
+                scoreEL.textContent = score;
+                bug.remove();
+            };
+
+            khel.appendChild(bug);
+            setTimeout(() => bug.remove(), 1000);
+        }
+
+        function startKhel() {
+            score = 0;
+            time = 30;
+
+            scoreEL.textContent = score;
+            samaya.textContent = time;
+
+            clearInterval(gameInterval);
+            clearInterval(bugSamaya);
+
+            bugSamaya = setInterval(spawnBug, 700);
+
+            gameInterval = setInterval(() => {
+                time--;
+                samaya.textContent = time;
+
+                if (time <= 0) {
+                    clearInterval(gameInterval);
+                    clearInterval(bugSamaya);
+                    alert("Game Over! Your Score: " + score);
+                }
+            }, 1000);
+        }
+    </script>
+
+</body>
+
+</html>
