@@ -1,0 +1,29 @@
+    body {
+        margin: 0;
+        height: 100vh;
+        background-color: #f0f0f0;
+        overflow: hidden;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        font-family: sans-serif;
+    }
+
+    #circle {
+        width: 100px;
+        height: 100px;
+        background-color: #3498db;
+        border-radius: 50%;
+        position: absolute;
+        cursor: pointer;
+        transition: all 0.3s ease;
+    }
+
+    #counter {
+        position: absolute;
+        top: 20px;
+        left: 20px;
+        font-size: 24px;
+        font-weight: bold;
+    }

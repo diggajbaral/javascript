@@ -4,52 +4,40 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Scroll progess bar</title>
+    <link rel="stylesheet" href="style.css">
+    <title>SideBar</title>
 </head>
-
-<style>
-    body {
-        margin: 0;
-        height: 1000vh;
-    }
-
-    #container {
-        top: 0;
-        left: 0;
-        height: 5px;
-        width: 100%;
-        z-index: 999;
-        position: fixed;
-        background-color: #eee;
-    }
-
-    #bar {
-        width: 0%;
-        height: 100%;
-        background-color: #4caf50;
-        transition: width 0.1s ease-out;
-    }
-</style>
 
 <body>
 
-    <div id="container">
-        <div id="bar"></div>
-    </div>
+    <div id="counter">Clicks : 0</div>
+    <div id="circle"></div>
 
     <script>
 
-        const bar = document.getElementById('bar');
+        const circle = document.getElementById('circle');
+        const counterDisplay = document.getElementById('counter');
 
-        window.addEventListener('scroll', function() {
+        let clickCount = 0;
 
-            const scrollTop = window.scrollY;
-            const docHeigth = document.documentElement.scrollHeight - window.innerHeight;
-            const scrollPercent = (scrollTop / docHeigth) * 100;
+        function moveCircle(){
 
-            bar.style.width = scrollPercent + '%';
+            const maxX = window.innerWidth - 100;
+            const maxY = window.innerHeight - 100;
 
-        })
+            const randomX = Math.random() * maxX;
+            const randomY = Math.random() * maxY;
+
+            circle.style.left = `${randomX}px`;
+            circle.style.top = `${randomY}px`;
+
+        }
+
+        circle.addEventListener('click', () => {
+            clickCount++;
+            counterDisplay.textContent = `Clicks : ${clickCount}`;
+            moveCircle();
+        });
 
     </script>
 
