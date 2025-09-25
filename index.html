@@ -9,39 +9,32 @@
 
 <body>
 
-    <input type="text" id="nameInput" placeholder="Enter you name">
-    <button id="saveBtn">Save</button>
+    <form class="form">
+        <input type="text" class="input">
+        <button type="submit">Add</button>
+    </form>
 
-    <p id="greeting"></p>
+    <ul class="list"></ul>
 
     <script>
 
-        const saveBtn = document.getElementById('saveBtn');
-        const nameInput = document.getElementById('nameInput');
-        const greeting = document.getElementById('greeting');
+        const form = document.querySelector('.form');
+        const input = document.querySelector('.input');
+        const list = document.querySelector('.list');
 
-        saveBtn.addEventListener('click', () => {
+        form.addEventListener('submit', function (e) {
 
-            const name = nameInput.value.trim();
+            e.preventDefault();
 
-            if (name) {
-                localStorage.setItem('userName', name);
-                showGreeting();
-            }
+            const taskText = input.value.trim();
 
-        });
+            const li = document.createElement("li");
+            li.textContent = taskText;
 
-        function showGreeting() {
+            list.appendChild(li);
+            input.value = '';
 
-            const savedName = localStorage.getItem('userName');
-
-            if (savedName) {
-                greeting.textContent = `Hello, ${savedName}!`;
-            }
-
-        }
-
-        showGreeting();
+        })
 
     </script>
 
