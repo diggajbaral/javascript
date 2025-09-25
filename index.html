@@ -4,67 +4,52 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Scroll progess bar</title>
 </head>
 
 <style>
     body {
+        margin: 0;
         height: 1000vh;
     }
 
-    #goTop {
-        right: 20px;
-        bottom: 20px;
-        cursor: pointer;
+    #container {
+        top: 0;
+        left: 0;
+        height: 5px;
+        width: 100%;
+        z-index: 999;
         position: fixed;
+        background-color: #eee;
     }
 
-    #goDown {
-        top: 20px;
-        right: 20px;
-        cursor: pointer;
-        position: fixed;
+    #bar {
+        width: 0%;
+        height: 100%;
+        background-color: #4caf50;
+        transition: width 0.1s ease-out;
     }
 </style>
 
 <body>
 
-    <button id="goTop">Go to top</button>
-    <button id="goDown">Go to Down</button>
+    <div id="container">
+        <div id="bar"></div>
+    </div>
 
     <script>
 
-        const goTop = document.getElementById('goTop');
+        const bar = document.getElementById('bar');
 
-        goTop.style.display = "none";
+        window.addEventListener('scroll', function() {
 
-        window.addEventListener('scroll', function () {
+            const scrollTop = window.scrollY;
+            const docHeigth = document.documentElement.scrollHeight - window.innerHeight;
+            const scrollPercent = (scrollTop / docHeigth) * 100;
 
-            if (window.scrollY > 600) {
-                goTop.style.display = 'block';
-            } else {
-                goTop.style.display = 'none';
-            }
+            bar.style.width = scrollPercent + '%';
 
         })
-
-        goTop.addEventListener('click', function () {
-            window.scrollTo({
-                top: 0,
-                behavior: 'smooth'
-            });
-        });
-
-        // Related to scroll to down,
-
-        const goDown = document.getElementById('goDown');
-
-        goDown.addEventListener('click', function() {
-            window.scrollTo({
-                top: document.body.scrollHeight,
-                behavior: 'smooth'
-            });
-        });
 
     </script>
 
