@@ -4,42 +4,55 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>To-Do List</title>
+    <title>Document</title>
 </head>
+
+<style>
+    li {
+        cursor: pointer;
+        list-style: decimal;
+    }
+</style>
 
 <body>
 
-    <form id="todoForm">
+    <form id="form">
         <input type="text" id="createList">
         <button type="submit">Add</button>
     </form>
 
-    <ul id="lists"></ul>
+    <ul id="list"></ul>
 
     <script>
 
-        const form = document.getElementById('todoForm');
-        const input = document.getElementById('createList');
-        const lists = document.getElementById('lists');
+        const form = document.getElementById('form');
+        const createList = document.getElementById('createList');
+        const list = document.getElementById('list');
+
+        const savedTasks = JSON.parse(localStorage.getItem('tasks')) || [];
+        savedTasks.forEach(task => addTaskToDOM(task));
 
         form.addEventListener('submit', function(e) {
 
             e.preventDefault();
 
-            const taskText = input.value.trim();
-            if (taskText === '') return;
+            const task = createList.value.trim();
+            if (task === '') return;
+
+            addTaskToDOM(task);
+            savedTasks.push(task);
+            localStorage.setItem('tasks', JSON.stringify(savedTasks));
+            createList.value = '';
+
+        });
+
+        function addTaskToDOM(task) {
 
             const li = document.createElement('li');
-            li.textContent = taskText;
+            li.textContent = task;
+            list.appendChild(li);
 
-            li.addEventListener('click', () => {
-                li.remove();
-            });
-
-            lists.appendChild(li);
-            input.value = '';
-
-        })
+        }
 
     </script>
 
