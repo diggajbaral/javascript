@@ -4,40 +4,42 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <title>SideBar</title>
+    <title>To-Do List</title>
 </head>
 
 <body>
 
-    <div id="counter">Clicks : 0</div>
-    <div id="circle"></div>
+    <form id="todoForm">
+        <input type="text" id="createList">
+        <button type="submit">Add</button>
+    </form>
+
+    <ul id="lists"></ul>
 
     <script>
 
-        const circle = document.getElementById('circle');
-        const counterDisplay = document.getElementById('counter');
+        const form = document.getElementById('todoForm');
+        const input = document.getElementById('createList');
+        const lists = document.getElementById('lists');
 
-        let clickCount = 0;
+        form.addEventListener('submit', function(e) {
 
-        function moveCircle(){
+            e.preventDefault();
 
-            const maxX = window.innerWidth - 100;
-            const maxY = window.innerHeight - 100;
+            const taskText = input.value.trim();
+            if (taskText === '') return;
 
-            const randomX = Math.random() * maxX;
-            const randomY = Math.random() * maxY;
+            const li = document.createElement('li');
+            li.textContent = taskText;
 
-            circle.style.left = `${randomX}px`;
-            circle.style.top = `${randomY}px`;
+            li.addEventListener('click', () => {
+                li.remove();
+            });
 
-        }
+            lists.appendChild(li);
+            input.value = '';
 
-        circle.addEventListener('click', () => {
-            clickCount++;
-            counterDisplay.textContent = `Clicks : ${clickCount}`;
-            moveCircle();
-        });
+        })
 
     </script>
 
