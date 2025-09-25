@@ -7,52 +7,41 @@
     <title>Document</title>
 </head>
 
-<style>
-    li {
-        cursor: pointer;
-        list-style: decimal;
-    }
-</style>
-
 <body>
 
-    <form id="form">
-        <input type="text" id="createList">
-        <button type="submit">Add</button>
-    </form>
+    <input type="text" id="nameInput" placeholder="Enter you name">
+    <button id="saveBtn">Save</button>
 
-    <ul id="list"></ul>
+    <p id="greeting"></p>
 
     <script>
 
-        const form = document.getElementById('form');
-        const createList = document.getElementById('createList');
-        const list = document.getElementById('list');
+        const saveBtn = document.getElementById('saveBtn');
+        const nameInput = document.getElementById('nameInput');
+        const greeting = document.getElementById('greeting');
 
-        const savedTasks = JSON.parse(localStorage.getItem('tasks')) || [];
-        savedTasks.forEach(task => addTaskToDOM(task));
+        saveBtn.addEventListener('click', () => {
 
-        form.addEventListener('submit', function(e) {
+            const name = nameInput.value.trim();
 
-            e.preventDefault();
-
-            const task = createList.value.trim();
-            if (task === '') return;
-
-            addTaskToDOM(task);
-            savedTasks.push(task);
-            localStorage.setItem('tasks', JSON.stringify(savedTasks));
-            createList.value = '';
+            if (name) {
+                localStorage.setItem('userName', name);
+                showGreeting();
+            }
 
         });
 
-        function addTaskToDOM(task) {
+        function showGreeting() {
 
-            const li = document.createElement('li');
-            li.textContent = task;
-            list.appendChild(li);
+            const savedName = localStorage.getItem('userName');
+
+            if (savedName) {
+                greeting.textContent = `Hello, ${savedName}!`;
+            }
 
         }
+
+        showGreeting();
 
     </script>
 
