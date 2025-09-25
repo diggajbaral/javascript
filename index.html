@@ -7,18 +7,64 @@
     <title>Document</title>
 </head>
 
+<style>
+    body {
+        height: 1000vh;
+    }
+
+    #goTop {
+        right: 20px;
+        bottom: 20px;
+        cursor: pointer;
+        position: fixed;
+    }
+
+    #goDown {
+        top: 20px;
+        right: 20px;
+        cursor: pointer;
+        position: fixed;
+    }
+</style>
+
 <body>
 
-    <h1>Hello JavaScript!</h1>
+    <button id="goTop">Go to top</button>
+    <button id="goDown">Go to Down</button>
 
     <script>
 
-        let newDiv = document.createElement("div");
-        newDiv.innerHTML = "<h1>JavaScript</h1>";
-        document.body.appendChild(newDiv);
+        const goTop = document.getElementById('goTop');
 
-        const ele = document.querySelector("h1")
-        ele.remove();
+        goTop.style.display = "none";
+
+        window.addEventListener('scroll', function () {
+
+            if (window.scrollY > 600) {
+                goTop.style.display = 'block';
+            } else {
+                goTop.style.display = 'none';
+            }
+
+        })
+
+        goTop.addEventListener('click', function () {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+
+        // Related to scroll to down,
+
+        const goDown = document.getElementById('goDown');
+
+        goDown.addEventListener('click', function() {
+            window.scrollTo({
+                top: document.body.scrollHeight,
+                behavior: 'smooth'
+            });
+        });
 
     </script>
 
