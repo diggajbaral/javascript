@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <div class="container" style="display: flex; gap: 30px;">
+        <button id="decreseCount">-</button>
+        <p id="displayCount" style="font-size: 29px;">0</p>
+        <button id="increaseCount">+</button>
+    </div>
+
+    <script>
+
+        const decrese = document.getElementById('decreseCount');
+        const increase = document.getElementById('increaseCount');
+        const display = document.getElementById('displayCount');
+
+        let counter = 0;
+
+        decrese.addEventListener('click', function () {
+
+            counter--;
+
+            if (counter >= 0) {
+                counter--;
+                display.textContent = counter;
+                console.log(counter);
+            }
+
+        })
+
+        increase.addEventListener('click', function () {
+
+            counter++;
+
+            display.textContent = counter;
+            console.log(counter);
+        })
+
+    </script>
+
+</body>
+
+</html>
