@@ -4,26 +4,52 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>To-DO List</title>
 </head>
+
+<style>
+    li {
+        list-style: decimal;
+    }
+</style>
 
 <body>
 
-    <input type="text" placeholder="#XXXXXX" id="color">
-    <button id="apply">Apply Now</button>
+    <form id="form">
+        <input type="text" placeholder="Create List" id="createList">
+        <button type="submit">Add</button>
+    </form>
+
+    <ul id="showLists"></ul>
 
     <script>
 
-        const color = document.getElementById('color');
-        const apply = document.getElementById('apply');
-        const body = document.body;
+        const createList = document.getElementById('createList');
+        const showLists = document.getElementById('showLists');
+        const form = document.getElementById('form');
 
-        function getColor() {
-            const colorValue = color.value;
-            body.style.background = colorValue;
-        }
+        form.addEventListener('submit', function(e) {
 
-        apply.addEventListener('click', getColor);
+            e.preventDefault();
+
+            const userInput = createList.value;
+
+            if (userInput !== '') {
+
+                const newItem = document.createElement('li');
+                newItem.textContent = userInput;
+
+                showLists.appendChild(newItem);
+
+                newItem.addEventListener('click', ()=> {
+                    newItem.remove();
+                });
+
+                createList.value = '';
+
+            }
+
+        });
 
     </script>
 
