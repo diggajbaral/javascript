@@ -4,34 +4,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Add two digits</title>
+    <title>Document</title>
 </head>
 
 <body>
 
-    <input type="number" id="a">
-    <input type="number" id="b">
-    <button id="sum">Find Sum</button>
-    <span id="total"></span>
+    <input type="text" placeholder="#XXXXXX" id="color">
+    <button id="apply">Apply Now</button>
 
     <script>
 
-        const a = document.getElementById('a');
-        const b = document.getElementById('b');
-        const sum = document.getElementById('sum');
-        const total = document.getElementById('total');
+        const color = document.getElementById('color');
+        const apply = document.getElementById('apply');
+        const body = document.body;
 
-        function findSum() {
-
-            const aValue = Number(a.value);
-            const bValue = Number(b.value);
-            const totalValue = aValue + bValue;
-
-            total.innerHTML = totalValue;
-
+        function getColor() {
+            const colorValue = color.value;
+            body.style.background = colorValue;
         }
 
-        sum.addEventListener('click', findSum);
+        apply.addEventListener('click', getColor);
 
     </script>
 
