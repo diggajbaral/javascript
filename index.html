@@ -4,44 +4,33 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Tips Calculator</title>
 </head>
 
 <body>
 
-    <div class="container" style="display: flex; gap: 30px;">
-        <button id="decreseCount">-</button>
-        <p id="displayCount" style="font-size: 29px;">0</p>
-        <button id="increaseCount">+</button>
-    </div>
+    <input type="number" id="bill" placeholder="Enter total bill amount">
+    <input type="number" id="tips" placeholder="Enter tips in %">
+    <button id="calculate">Calculate</button>
+    <span id="total"></span>
 
     <script>
 
-        const decrese = document.getElementById('decreseCount');
-        const increase = document.getElementById('increaseCount');
-        const display = document.getElementById('displayCount');
+        const bill = document.getElementById('bill');
+        const tips = document.getElementById('tips');
+        const calculate = document.getElementById('calculate');
+        const total = document.getElementById('total');
 
-        let counter = 0;
+        function calculateTotal() {
 
-        decrese.addEventListener('click', function () {
+            const billValue = bill.value;
+            const tipsValue = bill.value;
+            const totalValue = billValue * (1 + tipsValue / 100);
+            total.innerHTML = totalValue.toFixed(2);
 
-            counter--;
+        }
 
-            if (counter >= 0) {
-                counter--;
-                display.textContent = counter;
-                console.log(counter);
-            }
-
-        })
-
-        increase.addEventListener('click', function () {
-
-            counter++;
-
-            display.textContent = counter;
-            console.log(counter);
-        })
+        calculate.addEventListener("click", calculateTotal);
 
     </script>
 
