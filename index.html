@@ -4,33 +4,34 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tips Calculator</title>
+    <title>Add two digits</title>
 </head>
 
 <body>
 
-    <input type="number" id="bill" placeholder="Enter total bill amount">
-    <input type="number" id="tips" placeholder="Enter tips in %">
-    <button id="calculate">Calculate</button>
+    <input type="number" id="a">
+    <input type="number" id="b">
+    <button id="sum">Find Sum</button>
     <span id="total"></span>
 
     <script>
 
-        const bill = document.getElementById('bill');
-        const tips = document.getElementById('tips');
-        const calculate = document.getElementById('calculate');
+        const a = document.getElementById('a');
+        const b = document.getElementById('b');
+        const sum = document.getElementById('sum');
         const total = document.getElementById('total');
 
-        function calculateTotal() {
+        function findSum() {
 
-            const billValue = bill.value;
-            const tipsValue = bill.value;
-            const totalValue = billValue * (1 + tipsValue / 100);
-            total.innerHTML = totalValue.toFixed(2);
+            const aValue = Number(a.value);
+            const bValue = Number(b.value);
+            const totalValue = aValue + bValue;
+
+            total.innerHTML = totalValue;
 
         }
 
-        calculate.addEventListener("click", calculateTotal);
+        sum.addEventListener('click', findSum);
 
     </script>
 
