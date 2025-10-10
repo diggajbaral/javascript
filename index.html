@@ -4,50 +4,44 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>To-DO List</title>
+    <title>Document</title>
 </head>
 
-<style>
-    li {
-        list-style: decimal;
-    }
-</style>
-
-<body>
+<body style="text-align: center;">
 
     <form id="form">
-        <input type="text" placeholder="Create List" id="createList">
-        <button type="submit">Add</button>
+        <input type="number" placeholder="Integer" id="input">
+        <button type="submit" id="toogleBtn">+</button>
     </form>
 
-    <ul id="showLists"></ul>
+    <h1 id="countdown">0</h1>
 
     <script>
 
-        const createList = document.getElementById('createList');
-        const showLists = document.getElementById('showLists');
         const form = document.getElementById('form');
+        const input = document.getElementById('input');
+        const countdown = document.getElementById('countdown');
+
+        let timer = null;
 
         form.addEventListener('submit', function(e) {
-
             e.preventDefault();
 
-            const userInput = createList.value;
+            let count = parseInt(input.value);
 
-            if (userInput !== '') {
+            countdown.textContent = count;
 
-                const newItem = document.createElement('li');
-                newItem.textContent = userInput;
+            clearInterval(timer);
 
-                showLists.appendChild(newItem);
+            timer = setInterval(function() {
+                count--;
+                countdown.textContent = count;
 
-                newItem.addEventListener('click', ()=> {
-                    newItem.remove();
-                });
+                if (count <= 0) {
+                    clearInterval(timer);
+                }
 
-                createList.value = '';
-
-            }
+            }, 1000);
 
         });
 
