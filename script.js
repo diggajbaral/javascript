@@ -1,19 +1,18 @@
-const book = {
-    title: "The Alchemist",
-    author: "Paulo Coelho",
-    year: 1988,
-    price: 15
+const user = {
+    name: "jhon",
+    age: 30,
+    contact: {
+        email: "jhon@gmail.com",
+        phone: "213-456-789",
+        address: {
+            city: "new york",
+            zip: "10001"
+        }
+    }
 };
 
-delete book.price;
-console.log(book)
+console.log(user.contact.email);
+console.log(user.contact.address.city);
+user.contact.address.country = "USA";
 
-const checker = ("author" in book);
-
-if (checker == true) {
-    console.log('Author is Paulo Coelho');
-} else {
-    console.log('Author not found');
-}
-
-console.log(book)
+console.log(`${user.name} lives in ${user.contact.address.city}, ${user.contact.address.country}. Contact: ${user.contact.email}`)
