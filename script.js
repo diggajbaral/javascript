@@ -1,13 +1,19 @@
-const student = {
-    name: "Alice",
-    age: 20,
-    grade: "B"
+const book = {
+    title: "The Alchemist",
+    author: "Paulo Coelho",
+    year: 1988,
+    price: 15
 };
 
-student.grade = "A";
-// console.log(student)
+delete book.price;
+console.log(book)
 
-student.city = "london";
-// console.log(student)
+const checker = ("author" in book);
 
-console.log(`${student.name} is ${student.age} years old, lives in ${student.city}, and got and ${student.grade} grade.`)
+if (checker == true) {
+    console.log('Author is Paulo Coelho');
+} else {
+    console.log('Author not found');
+}
+
+console.log(book)
