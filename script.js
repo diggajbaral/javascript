@@ -18,12 +18,20 @@ const students = [
 
 for (let student of students) {
 
-    console.log(`${student.name} - ${student.age}`)
+    let total = 0;
+    let count = 0;
 
-    for (let key in student.grades) {
-        console.log(`${key} : ${student.grades[key]}`)
+    for (let subject in student.grades) {
+
+        total += student.grades[subject];
+        count++;
+
     }
 
-    console.log('- - - -')
+    let average = total / count;
+
+    console.log(
+        `${student.name} - Total ${total} & Average ${average}`
+    )
 
 }
