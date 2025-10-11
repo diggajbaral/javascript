@@ -16,6 +16,9 @@ const students = [
     }
 ];
 
+let topStudent = "";
+let highestAverage = 0;
+
 for (let student of students) {
 
     let total = 0;
@@ -30,8 +33,16 @@ for (let student of students) {
 
     let average = total / count;
 
-    console.log(
-        `${student.name} - Total ${total} & Average ${average}`
-    )
+    console.log(`${student.name} - Average : ${average}`);
+
+    if (average > highestAverage) {
+
+
+        highestAverage = average;
+        topStudent = student.name;
+
+    }
 
 }
+
+console.log(`Top student: ${topStudent} with average = ${highestAverage}`);
