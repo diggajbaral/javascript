@@ -1,10 +1,8 @@
-let dot = 4;
-
-for (let row = 1; row <= dot; row++) {
+for (i = 0; i <= 7; i++) {
 
     let star = '';
 
-    for (let col = 1; col <= dot; col++) {
+    for (j = 0; j <=i; j++) {
         star += '*';
     }
 
