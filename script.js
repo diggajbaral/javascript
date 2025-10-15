@@ -1,11 +1,10 @@
-for (i = 0; i <= 7; i++) {
+let n = 5;
 
-    let star = '';
+for (let i = 1; i <= n; i++) {
 
-    for (j = 0; j <=i; j++) {
-        star += '*';
-    }
+    let spaces = ' '.repeat(n - i);
+    let stars = '*'.repeat(2 * i - 1);
 
-    console.log(star);
+    console.log(spaces + stars);
 
 }
