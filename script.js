@@ -1,9 +1,7 @@
-const val1 = [];
-const val2 = {};
-const val3 = "false";
+const num = 5;
+const str = "5";
+const bool = true;
 
-if (val1 && val2 && !val3) {
-    console.log("condtional is true");
-} else {
-    console.log("condtional is false");
-}
+const result = num === str ? (bool && yes) : (!bool ? "No" : "Maybe");
+
+console.log(result);
