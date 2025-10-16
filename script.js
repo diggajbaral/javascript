@@ -1,6 +1,11 @@
-let i = 0;
+const car = {
+    brand: "hyundai",
+    model: "creata",
+    year: 2020,
+    start: function () {
+        console.log("Engine Started.");
+    }
+};
 
-while (i <= 20) {
-    console.log(i);
-    i = i + 2
-}
+console.log(car.brand);
+car.start();
