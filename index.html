@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Even || Odd</title>
+</head>
+
+<body>
+
+    <form>
+        <input type="text" id="input">
+        <button type="submit">Go</button>
+    </form>
+
+    <h1 id="display">0</h1>
+
+    <script>
+
+        const form = document.querySelector('form');
+        const input = document.getElementById('input');
+        const display = document.getElementById('display');
+
+        form.addEventListener('submit', function (e) {
+
+            e.preventDefault();
+
+            const enterValue = parseInt(input.value.trim());
+
+            if (enterValue == "") {
+                return;
+            }
+
+            if(isNaN(enterValue)) {
+                display.textContent = "Please enter a valid number."
+                return;
+            }
+
+            if (enterValue % 2 === 0) {
+                display.textContent = `The ${input.value} is Even`;
+            } else {
+                display.textContent = `The ${input.value} is Odd`;
+            }
+
+        })
+
+
+
+    </script>
+
+</body>
+
+</html>
