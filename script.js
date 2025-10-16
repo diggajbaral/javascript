@@ -1,12 +1,9 @@
-const a = null;
-const b = 0;
-const c = false;
-const d = "0";
-const e = [];
-const f = {};
+const val1 = [];
+const val2 = {};
+const val3 = "false";
 
-if (a || b && (c || d) && e.length === 0 && typeof f === "object") {
-    console.log("Passed");
+if (val1 && val2 && !val3) {
+    console.log("condtional is true");
 } else {
-    console.log("Failed");
+    console.log("condtional is false");
 }
