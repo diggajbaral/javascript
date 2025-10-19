@@ -1,9 +1,20 @@
-function capitalize(str) {
+function vowelsCounter(str) {
 
-    if (str.length === 0) return;
+    const vowels = 'aeiou';
+    let count = 0;
 
-    return str.charAt(0).toUpperCase() + str.slice(1).toLowerCase();
+    for (let i = 0; i < str.length; i++) {
+
+        let char = str[i].toLowerCase();
+
+        if (vowels.includes(char)) {
+            count++;
+        }
+
+    }
+
+    return count;
 
 }
 
-console.log(capitalize('javaScript'));
+console.log(vowelsCounter('apple'));
