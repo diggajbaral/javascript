@@ -1,8 +1,17 @@
-const sentence = 'microsoft';
-const rev = sentence.split('').reverse().join('');
+function uniqueChar(str) {
 
-if (sentence == rev) {
-    console.log('it is palindrome');
-} else {
-    console.log("it's not palindrome");
+    for (let i = 0; i < str.length; i++) {
+
+        let char = str[i];
+
+        if (str.indexOf(char) === str.lastIndexOf(char)) {
+            return char;
+        }
+
+    }
+
+    return null;
+
 }
+
+console.log(uniqueChar('aabbcc'));
