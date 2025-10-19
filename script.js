@@ -1,5 +1,8 @@
-let sentence = "The quick brown fox jumps over the lazy dog.";
+const sentence = 'microsoft';
+const rev = sentence.split('').reverse().join('');
 
-const spt = sentence.split(' ');
-const result = spt.slice(2, 4)
-console.log(result);
+if (sentence == rev) {
+    console.log('it is palindrome');
+} else {
+    console.log("it's not palindrome");
+}
