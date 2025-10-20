@@ -6,14 +6,14 @@ const school = [
     { id: 5, name: "Kiran Gurung", class: 11, fee_pays: 2800 }
 ];
 
-let highestFeeStudent = school[0];
+let lowestFee = school[0];
 
 for (student of school) {
 
-    if (student.fee_pays > highestFeeStudent.fee_pays) {
-        highestFeeStudent = student
-    }
+    if (student.fee_pays < lowestFee.fee_pays) {
+        lowestFee = student;
+    } 
 
 }
 
-console.log(highestFeeStudent);
+console.log(lowestFee);
