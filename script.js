@@ -1,5 +1,12 @@
-const num = 123456789;
+let i = 10;
 
-const result = num.toString().split('').reverse().join('')
+const countdown = setInterval(() => {
 
-console.log(result);
+    console.log(i);
+    i--;
+
+    if (i < 0) {
+        clearInterval(countdown);
+    }
+
+}, 1000)
