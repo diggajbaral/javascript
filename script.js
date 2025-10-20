@@ -6,14 +6,10 @@ const school = [
     { id: 5, name: "Kiran Gurung", class: 11, fee_pays: 2800 }
 ];
 
-const searchName = "Sita Rai";
-let foundStudent = null;
+const names = [];
 
 for (const student of school) {
-    if (student.name === searchName) {
-        foundStudent = student;
-        break;
-    }
+    names.push(student.name);
 }
 
-console.log(foundStudent);
+console.log(names);
