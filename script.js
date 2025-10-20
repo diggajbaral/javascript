@@ -1,9 +1,5 @@
-let factorial = 1;
+const num = 123456789;
 
-for (let i = 1; i <= 6; i++) {
+const result = num.toString().split('').reverse().join('')
 
-    factorial *= i;
-
-}
-
-console.log("The factorial of 6 is", factorial);
+console.log(result);
