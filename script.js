@@ -1,17 +1,7 @@
-function removeDuplicates(str) {
+let sum = 0;
 
-    let result = "";
-
-    for (let i = 0; i < str.length; i++) {
-
-        let char = str[i];
-
-        if (!result.includes(char)) {
-            result += char;
-        }
-
-    }
-    return result;
+for (let i = 0; i <= 100; i++) {
+    sum += i;
 }
 
-console.log(removeDuplicates('slim line'));
+console.log(sum);
