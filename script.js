@@ -1,20 +1,17 @@
-function vowelsCounter(str) {
+function removeDuplicates(str) {
 
-    const vowels = 'aeiou';
-    let count = 0;
+    let result = "";
 
     for (let i = 0; i < str.length; i++) {
 
-        let char = str[i].toLowerCase();
+        let char = str[i];
 
-        if (vowels.includes(char)) {
-            count++;
+        if (!result.includes(char)) {
+            result += char;
         }
 
     }
-
-    return count;
-
+    return result;
 }
 
-console.log(vowelsCounter('apple'));
+console.log(removeDuplicates('slim line'));
