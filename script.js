@@ -6,8 +6,14 @@ const school = [
     { id: 5, name: "Kiran Gurung", class: 11, fee_pays: 2800 }
 ];
 
+const searchName = "Sita Rai";
+let foundStudent = null;
+
 for (const student of school) {
-    student.passed = student.fee_pays > 2500;
+    if (student.name === searchName) {
+        foundStudent = student;
+        break;
+    }
 }
 
-console.log(school);
+console.log(foundStudent);
