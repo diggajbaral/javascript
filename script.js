@@ -1,7 +1,9 @@
-let sum = 0;
+let factorial = 1;
 
-for (let i = 0; i <= 100; i++) {
-    sum += i;
+for (let i = 1; i <= 6; i++) {
+
+    factorial *= i;
+
 }
 
-console.log(sum);
+console.log("The factorial of 6 is", factorial);
