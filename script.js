@@ -6,10 +6,14 @@ const school = [
     { id: 5, name: "Kiran Gurung", class: 11, fee_pays: 2800 }
 ];
 
-const names = [];
+let highestFeeStudent = school[0];
 
-for (const student of school) {
-    names.push(student.name);
+for (student of school) {
+
+    if (student.fee_pays > highestFeeStudent.fee_pays) {
+        highestFeeStudent = student
+    }
+
 }
 
-console.log(names);
+console.log(highestFeeStudent);
