@@ -3,21 +3,24 @@ const apiResponse = {
         { id: 1, name: "Alice", age: 28 },
         { id: 2, name: "Bob", age: 34 },
         { id: 3, name: "Charlie", age: 22 },
-        { id: 4, name: "Diana", age: 31 }
+        { id: 4, name: "Diana", age: 31 },
+        { id: 5, name: "Eve", age: 28 },
+        { id: 6, name: "Frank", age: 22 }
     ]
 };
 
-const age = {
-    under30: [],
-    above30: []
-};
+let totalAge = {};
 
-for (const user of apiResponse.users) {
-    if (user.age < 30) {
-        age.under30.push(user.name);
+for (user of apiResponse.users) {
+
+    const age = user.age;
+
+    if (totalAge[age]) {
+        totalAge[age]++;
     } else {
-        age.above30.push(user.name);
+        totalAge[age] = 1;
     }
+
 }
 
-console.log(age);
+console.log(totalAge);
