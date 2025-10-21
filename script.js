@@ -7,10 +7,17 @@ const apiResponse = {
     ]
 };
 
-const userMap = {};
+const age = {
+    under30: [],
+    above30: []
+};
 
 for (const user of apiResponse.users) {
-    userMap[user.id] = user.name
+    if (user.age < 30) {
+        age.under30.push(user.name);
+    } else {
+        age.above30.push(user.name);
+    }
 }
 
-console.log(userMap);
+console.log(age);
