@@ -1,14 +1,16 @@
-const items = [
-    { name: "Pen" },
-    { name: "Notebook" },
-    { name: "Eraser" }
-];
+const apiResponse = {
+    users: [
+        { id: 1, name: "Alice", age: 28 },
+        { id: 2, name: "Bob", age: 34 },
+        { id: 3, name: "Charlie", age: 22 },
+        { id: 4, name: "Diana", age: 31 }
+    ]
+};
 
+const userMap = {};
 
-let newProperty = [];
-
-for (const item of items) {
-    newProperty.push({ ...item, inStock: true });
+for (const user of apiResponse.users) {
+    userMap[user.id] = user.name
 }
 
-console.log(newProperty);
+console.log(userMap);
