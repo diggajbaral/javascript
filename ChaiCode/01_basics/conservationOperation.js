@@ -18,3 +18,10 @@ console.log(booleanHasJoined); // true
 // true -> 1 | false -> 0
 // "" -> false
 // "elon musk" -> true
+
+// ----------------- Part Two -------------------- //
+
+console.log("1" + 2); // 12
+console.log(1 + "2"); // 12
+console.log("1" + 2 + 2); // 122 ?
+console.log(1 + 2 + "2"); // 32 ?
