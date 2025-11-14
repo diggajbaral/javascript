@@ -5,3 +5,4 @@
 // - - - Reference (Non-Primitive) - - - //
 // Array, Object, Function
 
+// Stack Memory (Primitive) & Heap Memory (Non-Primitive)
