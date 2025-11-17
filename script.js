@@ -1,3 +1,9 @@
-let nums = [4, 9, 1, 7, 3];
+let animals = ["dog", "cat", "cow"];
+let newAnimals = [];
 
-console.log(Math.max(...nums));
+for (let animal of animals) {
+    newAnimals.push(animal.toUpperCase());
+}
+
+console.log(animals);
+console.log(newAnimals);
