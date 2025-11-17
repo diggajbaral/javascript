@@ -1,8 +1,3 @@
-let nums = [3, 7, 2, 9];
-let sum = ['']
+let nums = [4, 9, 1, 7, 3];
 
-for (let num of nums) {
-    sum += num
-}
-
-console.log(sum);
+console.log(Math.max(...nums));
