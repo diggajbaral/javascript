@@ -1,10 +1,8 @@
-let numbers = [1, 4, 5, 8, 10, 13];
-let onlyEven = [];
+let items = ["a", "b", "c", "d"];
+let reversed = [];
 
-for (number of numbers) {
-    if (number % 2 == 0) {
-        onlyEven.push(number)
-    }
+for (let i = items.length - 1; i >= 0; i--) {
+    reversed.push(items[i]);
 }
 
-console.log(onlyEven);
+console.log(reversed);
