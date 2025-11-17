@@ -1,6 +1,8 @@
-let numbers = [10, 20, 30];
+let nums = [3, 7, 2, 9];
+let sum = ['']
 
-numbers.shift(); // Remove first element
-numbers.push(40); // Add new element to the last
+for (let num of nums) {
+    sum += num
+}
 
-console.log(numbers);
+console.log(sum);
