@@ -1,9 +1,10 @@
-let animals = ["dog", "cat", "cow"];
-let newAnimals = [];
+let numbers = [1, 4, 5, 8, 10, 13];
+let onlyEven = [];
 
-for (let animal of animals) {
-    newAnimals.push(animal.toUpperCase());
+for (number of numbers) {
+    if (number % 2 == 0) {
+        onlyEven.push(number)
+    }
 }
 
-console.log(animals);
-console.log(newAnimals);
+console.log(onlyEven);
