@@ -1,10 +1,4 @@
-let nums = [3, 8, 12, 5, 7, 20, 1];
-let count = 0;
+let fruits = ["apple", "banana", "orange", "grape"];
 
-for (let num of nums) {
-    if (num % 2 == 0) {
-        count = count + 1
-    }
-}
-
-console.log(count);
+console.log(fruits[0]);
+console.log(fruits[fruits.length - 1]);
