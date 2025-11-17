@@ -1,4 +1,6 @@
-let fruits = ["apple", "banana", "orange", "grape"];
+let numbers = [10, 20, 30];
 
-console.log(fruits[0]);
-console.log(fruits[fruits.length - 1]);
+numbers.shift(); // Remove first element
+numbers.push(40); // Add new element to the last
+
+console.log(numbers);
