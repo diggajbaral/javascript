@@ -1,2 +1,2 @@
 const array = [3, 7, 2, 9, 5];
-console.log(Math.max(...array));
+console.log(Math.min(...array));
