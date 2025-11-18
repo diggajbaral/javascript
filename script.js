@@ -4,9 +4,9 @@ let oddCount = [];
 
 for (let arr of array) {
     if (arr % 2 === 0) {
-        evenCount.push(arr);
+        evenCount++;
     } else {
-        oddCount.push(arr);
+        oddCount++;
     }
 }
 
