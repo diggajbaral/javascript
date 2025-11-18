@@ -1,10 +1,5 @@
-const data = [1, 2, 2, 3, 4, 4];
-const noDuplicate = [];
+const one = [1, 2, 3];
+const two = [4, 5, 6];
 
-for (let item of data) {
-    if (!noDuplicate.includes(item)){
-        noDuplicate.push(item);
-    }
-}
-
-console.log(noDuplicate);
+const result = one.concat(two);
+console.log(result);
