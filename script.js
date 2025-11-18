@@ -1,14 +1,8 @@
 const array = [3, 7, 2, 9, 5, 4];
-let evenCount = [];
-let oddCount = [];
+let reverse = [];
 
-for (let arr of array) {
-    if (arr % 2 === 0) {
-        evenCount++;
-    } else {
-        oddCount++;
-    }
+for (let i = array.length - 1; i >= 0; i--) {
+    reverse.push(array[i])
 }
 
-console.log(evenCount);
-console.log(oddCount);
+console.log(reverse);
