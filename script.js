@@ -1,2 +1,8 @@
 const array = [3, 7, 2, 9, 5];
-console.log(Math.min(...array));
+let sum = 0;
+
+for (let arr of array) {
+    sum += arr;
+}
+
+console.log(sum);
