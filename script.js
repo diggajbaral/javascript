@@ -1,3 +1,10 @@
-const array = [3, 7, 2, 9, 5, 4];
-console.log(array.includes(7));
-console.log(array.includes(70));
+const data = [1, 2, 2, 3, 4, 4];
+const noDuplicate = [];
+
+for (let item of data) {
+    if (!noDuplicate.includes(item)){
+        noDuplicate.push(item);
+    }
+}
+
+console.log(noDuplicate);
