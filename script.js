@@ -1,5 +1,4 @@
-const one = [1, 2, 3];
-const two = [4, 5, 6];
+const array = [4, 2, 7, 2, 9];
+const target = 2
 
-const result = one.concat(two);
-console.log(result);
+console.log(array.indexOf(target));
