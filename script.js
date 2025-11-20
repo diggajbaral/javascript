@@ -1,7 +1,8 @@
-const nums = [3, 10, 6, 15, 2, 20];
+const arr = [10, 5, 20, 8, 15];
+let reversedArray = [];
 
-const newNums = nums
-    .filter(num => num > 5)
-    .map(num => num * 2);
+for (let i = arr.length - 1; i >= 0; i--) {
+    reversedArray.push(arr[i])
+}
 
-console.log(newNums);
+console.log(reversedArray);
