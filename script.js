@@ -1,8 +1,12 @@
-const arr = [10, 5, 20, 8, 15];
-let reversedArray = [];
+const arr = ["a", "b", "a", "c", "b", "a"];
+const freq = {};
 
-for (let i = arr.length - 1; i >= 0; i--) {
-    reversedArray.push(arr[i])
+for (let item of arr) {
+    if (freq[item]) {
+        freq[item] += 1;
+    } else {
+        freq[item] = 1;
+    }
 }
 
-console.log(reversedArray);
+console.log(freq);
