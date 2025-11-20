@@ -1,4 +1,9 @@
-const array = [4, 2, 7, 2, 9];
-const target = 2
+const companyCEO = ['elon musk', 'sundar pachai', 'andy jassy', 'ritesh agarwal']
+let blockCEO = []
 
-console.log(array.indexOf(target));
+for (let ceo of companyCEO) {
+    blockCEO.push(ceo.toUpperCase());
+}
+
+console.log(blockCEO);
+
