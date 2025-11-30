@@ -1,8 +1,8 @@
-let a = 2;
-let b = 4;
-let c = { x: 3 };
+const array = [1, 2, 3, 4, 5];
+const reversedArray = [];
 
-let result =
-  (a += b **= 2) +
-  ((c.x += ++a) || (b -= a)) +
-  ((a && b) ? (c.x -= b--) : (a = ++b));
+for (let i = array.length - 1; i >= 0; i --) {
+  reversedArray.push(array[i]);
+}
+
+console.log(reversedArray);
