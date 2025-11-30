@@ -1,12 +1,14 @@
-const array = [1, 2, 3, 2, 3, 4, 6];
-const result = [];
+function isAnagram(a, b) {
 
-for (let arr of array) {
+  if (a.length !== b.length) return false;
 
-  if (!result.includes(arr)) {
-    result.push(arr)
-  }
+  let one = a.split("").sort().join("");
+  let two = b.split("").sort().join("");
+
+  console.log(one, two);
+
+  return one === two;
 
 }
 
-console.log(result);
+console.log(isAnagram("listen", "silent"));
