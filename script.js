@@ -1,3 +1,5 @@
-const array = [9, 8, 7, 6, 5, 4, 3, 2, 1, 0];
-const findingIndex = array.indexOf(9);
-console.log(findingIndex);
+const one = [1, 2, 3];
+const two = [4, 5, 6];
+
+const result = one.concat(two);
+console.log(result);
