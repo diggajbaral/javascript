@@ -1,10 +1,10 @@
-const array = [1, 2, 3, 3, 2, 1, 1, 1];
-const target = 1;
-let count = 0;
+const array = [1, 2, 3, 1, 2, 3, 4, 5];
+const result = [];
 
-for (let arr of array) {
-    if (arr === target)
-        count++;
+for (arr of array) {
+    if (!result.includes(arr)){
+        result.push(arr);
+    }
 }
 
-console.log(count);
+console.log(result);
