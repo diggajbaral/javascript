@@ -1,10 +1,3 @@
-const array = [1, 2, 3, 1, 2, 3, 4, 5];
-const result = [];
-
-for (arr of array) {
-    if (!result.includes(arr)){
-        result.push(arr);
-    }
-}
-
-console.log(result);
+const array = [9, 8, 7, 6, 5, 4, 3, 2, 1, 0];
+const findingIndex = array.indexOf(9);
+console.log(findingIndex);
