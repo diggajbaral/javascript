@@ -1,14 +1,8 @@
-const array = [1, 2, 3];
+const array = [5, 10, 15, 20, 25];
+let sum = 0;
 
-let ascending = true;
-let decending = true;
-
-for (let i = 1; i < array.length; i++) {
-    if (array[i] < array[i - 1])
-        ascending = false;
-    if (array[i] < array[i - 1])
-        decending = false;
+for (let arr of array) {
+    sum += arr;
 }
 
-let isSorted = ascending || decending;
-console.log(isSorted);
+console.log(sum);
