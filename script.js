@@ -1,5 +1,8 @@
-const code = "JavaScript";
+let str = "banana";
+let count = 0;
 
-for (let i = 0; i < code.length; i++) {
-    console.log(code[i]);
+for (let char of str) {
+    count += (char === "a")
 }
+
+console.log(count);
