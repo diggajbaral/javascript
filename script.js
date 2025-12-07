@@ -1,5 +1,5 @@
-const givenValue = 5;
+const code = "JavaScript";
 
-for (let i = 1; i <= 10; i++) {
-    console.log(`${givenValue} x ${i} = ${givenValue * i}`);
+for (let i = 0; i < code.length; i++) {
+    console.log(code[i]);
 }
