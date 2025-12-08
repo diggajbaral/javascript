@@ -1,12 +1,12 @@
-let num = 29;
-let count = 0;
+for (let i = 1; i <= 5; i++) {
 
-for(let k = num; k <= 1; k++) {
-    count = 1;
+    let row = "";
+
+    for (let j = 1; j <= i; j++) {
+
+        row += j;
+
+    }
+
+    console.log(row);
 }
-
-for (let i = 2; i * i <= num; i++) {
-    count += (num % i === 0);
-}
-
-console.log((count === 0 && "prime") || "not prime");
