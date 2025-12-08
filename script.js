@@ -1,8 +1,12 @@
-let str = "banana";
+let num = 29;
 let count = 0;
 
-for (let char of str) {
-    count += (char === "a")
+for(let k = num; k <= 1; k++) {
+    count = 1;
 }
 
-console.log(count);
+for (let i = 2; i * i <= num; i++) {
+    count += (num % i === 0);
+}
+
+console.log((count === 0 && "prime") || "not prime");
