@@ -1,8 +1,8 @@
-let n = 5;
-let factorial = 1;
+let num = 9801309237;
+let sumDigits = 0;
 
-for (let i = 1; i <= n; i++) {
-    factorial *= i;
+for (let temp = num; temp > 0; temp = Math.floor(temp / 10)) {
+    sumDigits += temp % 10;
 }
 
-console.log(factorial);
+console.log(sumDigits);
