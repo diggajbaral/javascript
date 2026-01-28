@@ -1,11 +1,8 @@
-const str = "javascript";
-const vowel = "aeiou";
-let counter = 0;
+const givenNumber = 5;
+let factorial = 1;
 
-for (let i = 0; i < str.length; i++) {
-    if (vowel.includes(str[i])) {
-        counter++;
-    }
+for (let i = 1; i <= givenNumber; i++) {
+    factorial *= i;
 }
 
-console.log(counter);
+console.log(factorial);
