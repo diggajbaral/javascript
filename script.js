@@ -1,8 +1,10 @@
-const natural = 5;
-let sum = 0;
+const givenNumber = 20;
+let totalCount = 0;
 
-for (let i = 1; i <= natural; i++){
-    sum += i;
+for (let i = 1; i <= givenNumber; i++) {
+    if (i % 3 === 0) {
+        totalCount ++;
+    }
 }
 
-console.log(sum);
+console.log(totalCount);
