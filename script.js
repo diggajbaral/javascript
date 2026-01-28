@@ -1,10 +1,5 @@
-const givenNumber = 20;
-let totalCount = 0;
+const str = "pineapple";
 
-for (let i = 1; i <= givenNumber; i++) {
-    if (i % 3 === 0) {
-        totalCount ++;
-    }
+for (let i = 0; i <= str.length - 1; i++){
+    console.log(i, str[i]);
 }
-
-console.log(totalCount);
