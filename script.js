@@ -1,5 +1,11 @@
-const str = "pineapple";
+const str = "javascript";
+const vowel = "aeiou";
+let counter = 0;
 
-for (let i = 0; i <= str.length - 1; i++){
-    console.log(i, str[i]);
+for (let i = 0; i < str.length; i++) {
+    if (vowel.includes(str[i])) {
+        counter++;
+    }
 }
+
+console.log(counter);
