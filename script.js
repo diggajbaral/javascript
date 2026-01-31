@@ -1,11 +1,8 @@
-let arr = [3, 7, 2, 1, 9, 5, 5, 1, 3, 2, 6, 7];
-const givenElement = 7;
-let count = 0;
+let arr = [1, 2, 3, 4, 5];
+let reversed = [];
 
-for (let i = 0; i < arr.length; i++) {
-    if (arr[i] === givenElement) {
-        count++;
-    }
+for (let i = arr.length - 1; i >= 0; i--) {
+    reversed.push(arr[i]);
 }
 
-console.log(count);
+console.log(reversed);
