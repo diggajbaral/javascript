@@ -1,8 +1,13 @@
-let arr = [1, 2, 3, 4, 5];
-let reversed = [];
+const string = "gaming laptop";
+const vowels = "aeiou";
+let counter = 0;
 
-for (let i = arr.length - 1; i >= 0; i--) {
-    reversed.push(arr[i]);
+for(let i = 0; i < string.length; i++) {
+
+    if (vowels.includes(string[i])){
+        counter++;
+    }
+
 }
 
-console.log(reversed);
+console.log(counter);
