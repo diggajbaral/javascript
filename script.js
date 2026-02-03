@@ -1,8 +1,4 @@
-let str = "hello";
-let reversed = "";
+let nums = [4, 3, 7, 89, 90];
+let min = Math.min(...nums);
 
-for (let i = str.length - 1; i >= 0; i--) {
-    reversed += str[i];
-}
-
-console.log(reversed);
+console.log(min);
