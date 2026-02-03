@@ -1,8 +1,15 @@
-let arr = [1, 2, 3, 4, 5];
-let reverse = [];
+let n = 5;
 
-for (i = arr.length - 1; i >= 0; i--) {
-    reverse.push(arr[i]);
+for (let i = 1; i <= n; i++) {
+
+    let row = "";
+
+    for (let j = 1; j <= i; j++) {
+
+        row += "*"
+
+    }
+
+    console.log(row);
+
 }
-
-console.log(reverse);
