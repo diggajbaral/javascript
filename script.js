@@ -1,18 +1,6 @@
-const settings = {
-    theme: "dark",
-    notifications: true,
-    language: "en"
-};
-
-let found = false;
-
-for (key in settings) {
-
-    if (key === "lang xxx uage") {
-        found = true;
-        break;
-    }
-
+function add(a, b) {
+    return a + b;
 }
 
-console.log(found ? "Key Found" : "Key not Found");
+let sum = add(5, 3)
+console.log(sum);
