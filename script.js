@@ -1,15 +1,11 @@
-let n = 5;
+const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9];
 
-for (let i = 1; i <= n; i++) {
-
-    let row = "";
-
-    for (let j = 1; j <= i; j++) {
-
-        row += "*"
-
+const rst = numbers.map(num => {
+    if (num % 2 === 0) {
+        return "even";
+    } else {
+        return "odd";
     }
+});
 
-    console.log(row);
-
-}
+console.log(rst);
