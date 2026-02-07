@@ -4,40 +4,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Turn On/Off Buld Light</title>
+    <title>Show Hidden Text</title>
 </head>
-
-<style>
-    body {
-        text-align: center;
-    }
-
-    #bulb {
-        border: none;
-        padding: 30px;
-        border-radius: 50%;
-        margin-bottom: 30px;
-    }
-</style>
 
 <body>
 
-    <button id="bulb"></button><br>
-    <button id="switch">ON</button>
+    <button id="show">Show Hidden Text</button>
+
+    <p id="text" style="display: none;">Lorem ipsum dolor sit amet consectetur.</p>
 
     <script>
 
-        const bulb = document.getElementById('bulb');
-        const switcher = document.getElementById('switch');
+        const show = document.getElementById('show');
+        const text = document.getElementById('text');
 
-        switcher.addEventListener('click', function () {
-
-            if (bulb.style.background === 'yellow') {
-                bulb.style.background = 'gray';
-                switcher.innerText = 'ON';
+        show.addEventListener('click', function () {
+            
+            if (text.style.display === 'none') {
+                text.style.display = 'block';
             } else {
-                bulb.style.background = 'yellow';
-                switcher.innerText = 'OFF';
+                text.style.display = 'none'
             }
 
         })
