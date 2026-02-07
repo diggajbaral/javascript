@@ -4,29 +4,28 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Show Hidden Text</title>
+    <title>Counter Application</title>
 </head>
 
 <body>
 
-    <button id="show">Show Hidden Text</button>
-
-    <p id="text" style="display: none;">Lorem ipsum dolor sit amet consectetur.</p>
+    <h1 id="showCount"></h1>
+    <button id="count">Add Count</button>
 
     <script>
 
-        const show = document.getElementById('show');
-        const text = document.getElementById('text');
+        const showCount = document.getElementById('showCount');
+        const count = document.getElementById('count');
 
-        show.addEventListener('click', function () {
-            
-            if (text.style.display === 'none') {
-                text.style.display = 'block';
-            } else {
-                text.style.display = 'none';
-            }
+        let counter = 0;
+        showCount.innerHTML = counter;
 
-        })
+        count.addEventListener('click', function () {
+
+            counter++;
+            showCount.innerHTML = counter;
+
+        });
 
     </script>
 
