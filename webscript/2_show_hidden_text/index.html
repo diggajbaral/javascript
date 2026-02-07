@@ -4,28 +4,43 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Counter Application</title>
+    <title>Turn On/Off Buld Light</title>
 </head>
+
+<style>
+    body {
+        text-align: center;
+    }
+
+    #bulb {
+        border: none;
+        padding: 30px;
+        border-radius: 50%;
+        margin-bottom: 30px;
+    }
+</style>
 
 <body>
 
-    <h1 id="showCount"></h1>
-    <button id="count">Add Count</button>
+    <button id="bulb"></button><br>
+    <button id="switch">ON</button>
 
     <script>
 
-        const showCount = document.getElementById('showCount');
-        const count = document.getElementById('count');
+        const bulb = document.getElementById('bulb');
+        const switcher = document.getElementById('switch');
 
-        let counter = 0;
-        showCount.innerHTML = counter;
+        switcher.addEventListener('click', function () {
 
-        count.addEventListener('click', function () {
+            if (bulb.style.background === 'yellow') {
+                bulb.style.background = 'gray';
+                switcher.innerText = 'ON';
+            } else {
+                bulb.style.background = 'yellow';
+                switcher.innerText = 'OFF';
+            }
 
-            counter++;
-            showCount.innerHTML = counter;
-
-        });
+        })
 
     </script>
 
