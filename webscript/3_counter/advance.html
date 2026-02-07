@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advanced Counter App</title>
+</head>
+
+<style>
+    body {
+        text-align: center;
+    }
+
+    h1 {
+        font-size: 180px;
+    }
+
+    button {
+        cursor: pointer;
+        font-size: 100px;
+        padding: 12px 20px;
+    }
+</style>
+
+<body>
+
+    <h1 id="display">0</h1>
+
+    <button id="decrease">-</button>
+    <button id="reset">Reset</button>
+    <button id="increase">+</button>
+
+    <script>
+
+        const display = document.getElementById('display');
+        const decrease = document.getElementById('decrease');
+        const reset = document.getElementById('reset');
+        const increase = document.getElementById('increase')
+
+        let counter = 0
+
+        increase.addEventListener('click', function () {
+            counter++;
+            display.innerText = counter;
+            display.style.color = 'green';
+            console.log(counter);
+        })
+
+        decrease.addEventListener('click', function () {
+            counter--;
+
+            if (counter < 0) {
+                counter = 0;
+                display.style.color = 'black';
+            } else {
+                display.innerText = counter;
+                display.style.color = 'red'
+                console.log(counter);
+            }
+        })
+
+        reset.addEventListener('click', function () {
+            counter = 0;
+            display.innerText = counter;
+            console.log(counter);
+        })
+
+    </script>
+
+</body>
+
+</html>
