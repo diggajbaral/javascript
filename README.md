@@ -8,3 +8,5 @@ Building JavaScript foundation through real projects and experimentation.
 - **Date & Time**
 - **Loops (for)**
 - **Array**
+- **Objects**
+- **Function**
