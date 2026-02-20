@@ -1,13 +1,17 @@
-for (let i = 1; i <= 5; i++) {
-    let line = "";
+const nums = [3, 0, 1];
 
-    for (let s = 1; s <= 5 - i; s++) {
-        line += " ";
-    }
+let n = nums.length;
 
-    for (let j = 1; j <= (2 * i - 1); j++) {
-        line += "*";
-    }
-
-    console.log(line);
+let expectedSum = 0;
+for (let i = 0; i <= n; i++) {
+  expectedSum += i;
 }
+
+let actualSum = 0;
+for (let i = 0; i < nums.length; i++) {
+  actualSum += nums[i];
+}
+
+let missingNumber = expectedSum - actualSum;
+
+console.log(missingNumber);
