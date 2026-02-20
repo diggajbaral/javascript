@@ -1,7 +1,13 @@
 for (let i = 1; i <= 5; i++) {
-    let star = "";
-    for (let j = 0; j < i; j++) {
-        star += "*";
+    let line = "";
+
+    for (let s = 1; s <= 5 - i; s++) {
+        line += " ";
     }
-    console.log(star);
+
+    for (let j = 1; j <= (2 * i - 1); j++) {
+        line += "*";
+    }
+
+    console.log(line);
 }
