@@ -1,7 +1,8 @@
-let sum = 0;
+const n = 5;
+let factorial = 1;
 
-for (let i = 0; i <= 5; i++) {
-  sum += i;
+for (let i = 1; i <= n; i++) {
+  factorial *= i
 }
 
-console.log(sum);
+console.log(factorial);
