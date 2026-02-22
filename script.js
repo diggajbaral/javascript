@@ -1,10 +1,15 @@
-let arr = [1, 2, 3, 2, 4, 1, 5];
-let unique = [];
+let num = 17;
+let isPrime = true;
 
-for (let i = 0; i < arr.length; i++) {
-  if (!unique.includes(arr[i])) {
-    unique.push(arr[i]);
+if (num <= 1) {
+  isPrime = false;
+}
+
+for (let i = 2; i < num; i++) {
+  if (num % i === 0) {
+    isPrime = false;
+    break;
   }
 }
 
-console.log(unique);
+console.log(isPrime);
