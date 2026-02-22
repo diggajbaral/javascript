@@ -1,7 +1,10 @@
-for (let i = 1; i <= 5; i++) {
-  let output = "";
-  for (let j = 1; j <= i; j++) {
-    output += j;
+let arr = [1, 2, 3, 2, 4, 1, 5];
+let unique = [];
+
+for (let i = 0; i < arr.length; i++) {
+  if (!unique.includes(arr[i])) {
+    unique.push(arr[i]);
   }
-  console.log(output);
 }
+
+console.log(unique);
