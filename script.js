@@ -1,8 +1,7 @@
-const n = 5;
-let factorial = 1;
-
-for (let i = 1; i <= n; i++) {
-  factorial *= i
+for (let i = 1; i <= 5; i++) {
+  let output = "";
+  for (let j = 1; j <= i; j++) {
+    output += j;
+  }
+  console.log(output);
 }
-
-console.log(factorial);
