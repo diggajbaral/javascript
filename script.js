@@ -1,15 +1,9 @@
-let num = 17;
-let isPrime = true;
+let n = 10;
+let a = 0, b = 1;
 
-if (num <= 1) {
-  isPrime = false;
+for (let i = 1; i <= n; i++) {
+  console.log(a);
+  let next = a + b;
+  a = b;
+  b = next;
 }
-
-for (let i = 2; i < num; i++) {
-  if (num % i === 0) {
-    isPrime = false;
-    break;
-  }
-}
-
-console.log(isPrime);
